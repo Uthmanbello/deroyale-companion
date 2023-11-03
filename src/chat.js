@@ -16,7 +16,8 @@ const ChatApp = () => {
     "What are your check-in and check-out dates?",
     "Do you have any room preferences like smoking/non-smoking or bed type?",
     "Any additional requests or special needs during your stay?",
-    "May I have your consent to store your information as per data protection laws?"
+    "May I have your consent to store your information as per data protection laws?",
+    "We are grateful!"
   ];
 
   const chatContainer = useRef(null);
