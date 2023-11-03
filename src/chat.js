@@ -7,7 +7,7 @@ const ChatApp = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [allQuestionsAnswered, setAllQuestionsAnswered] = useState(false);
   const questions = [
-    "Welcome to our hotel! May I have your full name, please?",
+    "Welcome to DeRoyale Lodge! May I have your full name, please?",
     "Could you provide your home address and email for our records?",
     "We'll also need a phone number to reach you during your stay.",
     "What's your nationality for legal purposes?",
@@ -59,7 +59,7 @@ const ChatApp = () => {
       <div className='landing'>
         <div style={{ width: '98%'}}>
           <div className='row align-center space-between'>
-          <Link to="/home" className='row align-center justify-center lang-btn english-btn back-link' style={{fontSize: '0.8rem'}}>Back</Link>
+          <Link to="/" className='row align-center justify-center lang-btn english-btn back-link' style={{fontSize: '0.8rem'}}>Back</Link>
           <h1 className='green heading-name'>Hotel Check-in</h1>
           </div>
           <div ref={chatContainer} style={{ height: '65vh', overflowY: 'scroll', padding: '10px' }}>
