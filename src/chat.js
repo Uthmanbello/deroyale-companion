@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './chat.css'
 
@@ -20,6 +20,8 @@ const ChatApp = () => {
     // Add more questions as needed
   ];
 
+  const chatContainer = useRef(null);
+
   useEffect(() => {
     if (currentQuestion < questions.length) {
       setTimeout(() => {
@@ -27,6 +29,21 @@ const ChatApp = () => {
       }, 1000);
     }
   }, [currentQuestion]);
+
+  const scrollToBottom = () => {
+    chatContainer.current.scrollTop = chatContainer.current.scrollHeight;
+  };
+
+  useEffect(() => {
+    const scrollToBottom = () => {
+      if (chatContainer.current) {
+        chatContainer.current.scrollTop = chatContainer.current.scrollHeight;
+      }
+    };
+  
+    scrollToBottom();
+  }, [messages]);
+  
 
   const handleSendMessage = (message) => {
     setMessages((prevMessages) => [...prevMessages, { text: message, isUser: true }]);
@@ -44,9 +61,9 @@ const ChatApp = () => {
   return (
     <div className="landing-page">
       <div className='landing'>
-        <div style={{ maxWidth: ''}}>
+        <div style={{ width: '98%'}}>
           <h1 className='green'>Hotel Check-in</h1>
-          <div style={{ height: '65vh', overflowY: 'scroll', padding: '10px' }}>
+          <div ref={chatContainer} style={{ height: '65vh', overflowY: 'scroll', padding: '10px' }}>
             {messages.map((message, index) => (
             <div key={index} style={{ textAlign: message.isUser ? 'right' : 'left', margin: '5px' }}>
                 <div style={{ padding: '10px', display: 'inline-block', borderRadius: '10px', backgroundColor: message.isUser ? '#122920' : 'rgb(145, 194, 156)', color: message.isUser ? '#ffffff' : '#000000' }}>
