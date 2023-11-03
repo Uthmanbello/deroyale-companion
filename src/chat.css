@@ -6,3 +6,16 @@
 .reply-input::placeholder {
   color: #122920;
 }
+
+.back-link {
+  padding: 0px;
+  height: 40px;
+  width: 40px;
+  flex-basis: 20%;
+  font-size: 0.8rem;
+}
+
+.heading-name {
+  margin-right: 10vw;
+  width: 100%;
+}

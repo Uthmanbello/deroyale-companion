@@ -58,7 +58,10 @@ const ChatApp = () => {
     <div className="landing-page">
       <div className='landing'>
         <div style={{ width: '98%'}}>
-          <h1 className='green'>Hotel Check-in</h1>
+          <div className='row align-center space-between'>
+          <Link to="/home" className='row align-center justify-center lang-btn english-btn back-link' style={{fontSize: '0.8rem'}}>Back</Link>
+          <h1 className='green heading-name'>Hotel Check-in</h1>
+          </div>
           <div ref={chatContainer} style={{ height: '65vh', overflowY: 'scroll', padding: '10px' }}>
             {messages.map((message, index) => (
               <div key={index} style={{ textAlign: message.isUser ? 'right' : 'left', margin: '5px' }}>
@@ -85,7 +88,6 @@ const ChatApp = () => {
             )}
             {allQuestionsAnswered && <div className='reply-input' style={{ padding: '20px', marginTop: '10px', marginBottom: '30px', backgroundColor: 'rgb(230, 230, 230)', color: '#122920' }}>All questions answered. We'll be in touch!</div>}
           </div>
-          <Link to="/home" className='lang-btn english-btn'>Back</Link>
         </div>
       </div>
     </div>
