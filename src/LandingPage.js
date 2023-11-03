@@ -12,7 +12,7 @@ const LandingPage = () => {
           <Link to="/chat" className='lang-btn english-btn'>Get Started</Link>
         </div>    
         <div className='landing-footer'>
-          <p style={{ color: 'rgb(145, 194, 156)' }}>&copy; {new Date().getFullYear()} <span style={{ fontWeight: 500, fontFamily: 'Josefin Sans, sans-serif', color: 'rgb(145, 194, 156)' }}>DeRoy<span style={{ color: '#ffb267' }} className="deroyale-at">@</span>l&#233;</span></p>
+          <p style={{ color: 'gold' }}>&copy; {new Date().getFullYear()} <span style={{ fontWeight: 500, fontFamily: 'Josefin Sans, sans-serif', color: 'gold' }}>DeRoy<span style={{ color: '#ffb267' }} className="deroyale-at">@</span>l&#233;</span></p>
         </div>
       </div>
     </div>

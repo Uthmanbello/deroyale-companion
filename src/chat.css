@@ -1,10 +1,10 @@
 .reply-input {
-  border-top: 3px solid #122920;
-  border-bottom: 3px dashed #122920;
+  border-top: 3px solid #000000;
+  border-bottom: 3px dashed #000000;
 }
 
 .reply-input::placeholder {
-  color: #122920;
+  color: #000000;
 }
 
 .back-link {

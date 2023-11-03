@@ -60,12 +60,12 @@ const ChatApp = () => {
         <div style={{ width: '98%'}}>
           <div className='row align-center space-between'>
           <Link to="/" className='row align-center justify-center lang-btn english-btn back-link' style={{fontSize: '0.8rem'}}>Back</Link>
-          <h1 className='green heading-name'>Hotel Check-in</h1>
+          <h1 className='gold heading-name'>Hotel Check-in</h1>
           </div>
           <div ref={chatContainer} style={{ height: '65vh', overflowY: 'scroll', padding: '10px' }}>
             {messages.map((message, index) => (
               <div key={index} style={{ textAlign: message.isUser ? 'right' : 'left', margin: '5px' }}>
-                <div style={{ padding: '10px', display: 'inline-block', borderRadius: '10px', backgroundColor: message.isUser ? '#122920' : 'rgb(145, 194, 156)', color: message.isUser ? '#ffffff' : '#000000' }}>
+                <div style={{ padding: '10px', display: 'inline-block', borderRadius: '10px', backgroundColor: message.isUser ? 'rgba(73, 62, 0, 0.87)' : 'rgba(255, 217, 0, 0.87)', color: message.isUser ? '#ffffff' : '#000000' }}>
                   {message.text}
                 </div>
               </div>
@@ -83,10 +83,10 @@ const ChatApp = () => {
                     e.target.value = '';
                   }
                 }}
-                style={{ width: '100%', marginTop: '10px', marginBottom: '30px', padding: '20px', backgroundColor: 'rgb(230, 230, 230)', color: '#122920'}}
+                style={{ width: '100%', marginTop: '10px', marginBottom: '30px', padding: '20px', backgroundColor: 'rgba(255, 240, 157, 0.87)', color: '#000000'}}
               />
             )}
-            {allQuestionsAnswered && <div className='reply-input' style={{ padding: '20px', marginTop: '10px', marginBottom: '30px', backgroundColor: 'rgb(230, 230, 230)', color: '#122920' }}>All questions answered. We'll be in touch!</div>}
+            {allQuestionsAnswered && <div className='reply-input' style={{ padding: '20px', marginTop: '10px', marginBottom: '30px', backgroundColor: 'rgba(255, 240, 157, 0.87)', color: '#000000' }}>All questions answered. We'll be in touch!</div>}
           </div>
         </div>
       </div>
